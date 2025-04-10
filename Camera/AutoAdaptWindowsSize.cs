@@ -100,16 +100,16 @@ namespace Camera.Camera
 
                     for (int i = 0; i < 5; i++)
                     {
-                        pos[i] = Convert.ToDouble(strs[i]);//添加到临时数组
+                        pos[i] = Convert.ToDouble(strs[i]);
                     }
-                    double itemWidth = pos[2] * scaleX;     //计算控件宽度，double类型
-                    double itemHeight = pos[3] * scaleY;    //计算控件高度
-                    item.Left = Convert.ToInt32(pos[0] * scaleX - itemWidth / 2);//计算控件距离左边距离
-                    item.Top = Convert.ToInt32(pos[1] * scaleY - itemHeight / 2);//计算控件距离顶部距离
-                    item.Width = Convert.ToInt32(itemWidth);//控件宽度，int类型
-                    item.Height = Convert.ToInt32(itemHeight);//控件高度
-                    if (float.Parse((pos[4] * Math.Min(scaleX, scaleY)).ToString()) != 0)         //缩放字体大小不能为0
-                    { item.Font = new Font(item.Font.Name, float.Parse((pos[4] * Math.Min(scaleX, scaleY)).ToString())); }  //字体
+                    double itemWidth = pos[2] * scaleX;
+                    double itemHeight = pos[3] * scaleY;
+                    item.Left = Convert.ToInt32(pos[0] * scaleX - itemWidth / 2);
+                    item.Top = Convert.ToInt32(pos[1] * scaleY - itemHeight / 2);
+                    item.Width = Convert.ToInt32(itemWidth);
+                    item.Height = Convert.ToInt32(itemHeight);
+                    if (float.Parse((pos[4] * Math.Min(scaleX, scaleY)).ToString()) != 0)
+                    { item.Font = new Font(item.Font.Name, float.Parse((pos[4] * Math.Min(scaleX, scaleY)).ToString())); }
                 }
             }
         }
